@@ -40,7 +40,7 @@ header {
 }
 
 h3 {
-    padding: 5%;
+    padding: 10px;
 }
 
 h1 {
@@ -51,18 +51,18 @@ h1 {
     font-size: 24px;
 }
 
-.kartu-artikel > * {
+.kartu-artikel > *:not(img) {
     margin: 10px 0;
 }
 
 .selamat-datang h1 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
     margin-right: 0%;
 }
 
 .artikel h1 {
-    margin: 5% 0;
+    margin: 5%;
 }
 
 .container-menu {
@@ -291,9 +291,14 @@ li {
 }
 
 .tips {
+    padding-top: 0;
     margin-top: -2px;
     color: black;
     background-image: linear-gradient(#adcce9, #eafdfc);
+}
+
+.tips > * {
+    margin: 10px;
 }
 
 .komunitas {
@@ -328,7 +333,11 @@ footer > img {
 }
 
 .artikel h1 {
-    letter-spacing: 9px;
+    letter-spacing: 5px;
+}
+
+.container-kartu-artikel > .kartu-artikel {
+    margin: 10px 0;
 }
 
 .layanan h1,
@@ -348,7 +357,188 @@ footer > img {
     flex-direction: column;
 }
 
+.artikel h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.artikel a {
+    border: 2px solid;
+    padding: 10px;
+    width: 70%;
+}
+
+.kartu-artikel {
+    width: 100%;
+}
+
+.artikel {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.artikel .kartu-artikel:nth-child(even) {
+    background: linear-gradient(#e9f2fa, #4c7397);
+}
+
+.layanan .kartu-layanan {
+    color: #4c7397;
+    background: #e9f2fa;
+}
+
+.layanan .kartu-layanan {
+    margin: 10% 0;
+    padding: 10px;
+}   
+
+
+
+.kartu-layanan h2 {
+    font-weight: 700;
+}
+
+.layanan h1 {
+    padding: 5px;
+    font-size: 24px;
+}
+
+.kartu-layanan p {
+    color: #111111;
+}
+
+.tips h1 {
+    font-size: 20px;
+}
+
+.tips h2 {
+    font-size: 16px;
+}
+
+.komunitas-container > * {
+    margin: 10px 0;
+}
+
+.komunitas h2 {
+    margin: 10%;
+}
+.komunitas a {
+    color: white;
+    background: #4c7397;
+    padding: 10px;
+}
+.container-kartu-artikel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album > * {
+    flex-basis: 348px;
+    flex-grow: 1;
+    margin: 10px;
+    min-width: 348px;
+}
+
+footer img {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.komunitas h1 {
+    font-size: 36px;
+}
+
+footer h2 {
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+.kartu-artikel {
+    min-width: 375px;
+    flex-basis: 375px;
+    flex-grow: 1;
+}
+
+.kartu-artikel img {
+    height: 270px;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.kartu-artikel > p, .kartu-artikel h2 {
+    padding: 10px;
+}
+
+.container-layanan {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-layanan .kartu-layanan {
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 33%;
+}
+
+.layanan {
+    padding: 0%;
+    padding-bottom: 5%;
+}
+
+.kartu-layanan a {
+    font-weight: 700;
+}
+
+footer {
+    padding: 10%;
+}
+
+.card-tips img {
+    max-height: none;
+    width: 100%;
+}
+
 @media screen and (min-width: 768px) {
+    .kartu-artikel h2 {
+        font-size: 24px;
+    }
+    .kartu-artikel p {
+        font-size: 18px;
+    }
+    .kartu-layanan a {
+        font-size: 48px;
+    }
+    .kartu-layanan p {
+        font-size: 24px;
+    }
+    .container-layanan {
+        flex-direction: row;
+    }
+    .container-layanan .kartu-layanan {
+        max-width: 33%;
+    }
+    .tips h1 {
+        font-size: 64px;
+    }
+
+    .tips h2 {
+        font-size: 24px;
+    }
+
+    .komunitas h1 {
+        font-size: 72px;
+    }
+    .artikel .container-kartu-artikel {
+        flex-direction: row;
+    }
     .artikel h1 {
         font-size: 36px;
     }
@@ -386,7 +576,7 @@ footer > img {
     }
 
     a {
-        font-size: 16;
+        font-size: 16px;
     }
 
     li {
@@ -415,7 +605,7 @@ footer > img {
     }
 
     .tantangan {
-        padding: 10%;
+        padding: 5%;
     }
 
     .tantangan .konten {
@@ -487,11 +677,5 @@ footer > img {
 
     h2 {
         margin-left: 0;
-    }
-}
-
-@keyframes naik {
-    0% {
-        transform: translateY(--yOffset);
     }
 }
