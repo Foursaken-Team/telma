@@ -45,6 +45,14 @@
             });
         </script>
         <style>
+            .container-menu {
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+            ul {
+                justify-content: center;
+            }
             body {
                 background: linear-gradient(#e9f2fa, #4c7397);
             }
@@ -128,17 +136,32 @@
 
             .profil {
                 display: flex;
+                flex-wrap: wrap;
                 flex-direction: column;
             }
 
             .profil .kartu-profil {
-                margin: 20px 0;
+                flex-basis: 375px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                min-width: 375px;
             }
 
             @media screen and (min-width: 768px) {
+                header {
+                    padding-top: 75px;
+                }
                 .profil {
+                    align-items: center;
+                    justify-content: center;
                     flex-direction: row;
                     width: 100%;
+                }
+                .kartu-profil {
+                    height: auto;
+                    margin: 20px;
+                    min-height: 230px;
+                    width: 33%;
                 }
             }
         </style>
@@ -194,18 +217,16 @@
             </div>
         </header>
         <section class="apa-itu-telma">
-            <div class="profil">
-                <h3>Apa itu TELMA?</h3>
-                <p>
-                    TELMA adalah platform daring yang didedikasikan untuk
-                    mendukung kesehatan mental dan kesejahteraan remaja Gen Z.
-                    Misi mereka adalah mendidik, menghubungkan, dan membangun
-                    komunitas. TELMA menawarkan artikel edukatif, layanan dan
-                    rujukan, serta komunitas online yang aman. Tujuan mereka
-                    adalah menciptakan lingkungan bebas stigma bagi remaja untuk
-                    meraih kesejahteraan mental yang lebih baik.
-                </p>
-            </div>
+            <h3>Apa itu TELMA?</h3>
+            <p>
+                TELMA adalah platform daring yang didedikasikan untuk
+                mendukung kesehatan mental dan kesejahteraan remaja Gen Z.
+                Misi mereka adalah mendidik, menghubungkan, dan membangun
+                komunitas. TELMA menawarkan artikel edukatif, layanan dan
+                rujukan, serta komunitas online yang aman. Tujuan mereka
+                adalah menciptakan lingkungan bebas stigma bagi remaja untuk
+                meraih kesejahteraan mental yang lebih baik.
+            </p>
         </section>
         <section class="siapa-kami">
             <h3>Siapa kami?</h3>
@@ -232,7 +253,7 @@
                     <span class="nama">Farhan Maulana</span>
                     <span class="peran">Pengatur Tata Letak</span>
                     <span class="kata-katanya-dong-bang"
-                        >Ini nih yang gw suka bray 😋😋😋😋, OO-</span
+                        >"Belajarlah dari hari hari kemarin dan hiduplah untuk hari ini, lalu berharaplah untuk hari esok."</span
                     >
                 </div>
                 <div class="kartu-profil">
@@ -241,11 +262,11 @@
                         src="assets/WhatsApp Image 2023-09-25 at 20.05.33.jpeg"
                         alt=""
                     />
-                    <span class="nama">Cungkyyy</span>
+                    <span class="nama">Rafasya Daffa</span>
                     <span class="peran">Pencetus Ide</span>
                     <span class="kata-katanya-dong-bang"
-                        >Membentuk mental anak sangat penting agar kelak menjadi
-                        seseorang yang berkarakter bukan seorang korupter</span
+                        >"Membentuk mental anak sangat penting agar kelak menjadi
+                        seseorang yang berkarakter bukan seorang korupter"</span
                     >
                 </div>
                 <div class="kartu-profil">
@@ -273,8 +294,8 @@
                         >Developer, Desainer, Tata Letak, Penulis</span
                     >
                     <span class="kata-katanya-dong-bang"
-                        >Jangan pernah menyerah pada impian kita. Impian adalah
-                        pusat dari segala pencapaian</span
+                        >"Jangan pernah menyerah pada impian kita. Impian adalah
+                        pusat dari segala pencapaian"</span
                     >
                 </div>
             </div>
