@@ -1,3 +1,5 @@
+let containerMenu;
+let backgroundMenu;
 const bukamenu = () => {
     containerMenu.style.display = "block";
     backgroundMenu.style.display = "block";
@@ -9,13 +11,12 @@ const tutupmenu = () => {
 };
 
 window.addEventListener("load", () => {
-    const containerMenu = document.querySelector(".container-menu");
-    const backgroundMenu = document.querySelector(".background-menu");
-
+    containerMenu = document.querySelector(".container-menu");
+    backgroundMenu = document.querySelector(".background-menu");
     removeStyleProperty();
     const kontenH3 = document.querySelector(".konten h3");
     const kartuArtikel = document.querySelectorAll(".artikel .kartu-artikel");
-    const artikel = document.querySelector(".artikel");
+    const p = document.querySelectorAll(".tantangan p");
 
     function removeStyleProperty() {
         if (window.innerWidth > 768) {
@@ -44,13 +45,14 @@ window.addEventListener("load", () => {
     const animate = () => {
         if (!h3anim && isElInVP(kontenH3)) {
             kontenH3.classList.add("swing");
+            p.forEach((elP) => elP.classList.add("animasi-tantangan-p"));
             h3anim = true;
         }
 
         if (!kartuAnim && isElInVP(kartuArtikel[0])) {
             kartuArtikel.forEach((kA) => {
                 kA.classList.add("animasi-kartu-artikel");
-            })
+            });
             kartuAnim = true;
         }
     };
